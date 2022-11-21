@@ -1,21 +1,26 @@
 .section-clients {
-  padding-bottom: 94px;
+  padding: 60px 0;
+
+  @include desktop {
+    padding: 94px 0;
+  }
 }
 
 .container-clients {
-  min-width: 320px;
-  max-width: 1200px;
+  width: 100%;
   margin: 0px auto;
   padding: 0px 15px;
 
   &__clients-title {
-    padding-top: 94px;
     text-align: center;
 
     font-weight: 700;
     font-size: 36px;
     line-height: 1.17;
     color: $primary-text-color;
+  }
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 30px;
   }
 }
 
@@ -41,6 +46,22 @@
 
     border: 1px solid #afb1b8;
     border-radius: 4px;
+
+    width: 100%;
+
+    @media screen and (max-width: 767px) {
+      @include calc(2, 30px);
+      flex-wrap: wrap;
+    }
+
+    @include tablet {
+      @include calc(3, 30px);
+      flex-wrap: wrap;
+    }
+
+    @include desktop {
+      @include calc(6, 30px);
+    }
   }
 
   &__logo-clients {
@@ -50,6 +71,18 @@
 
     width: 170px;
     height: 92px;
+
+    @media screen and (max-width: 767px) {
+      padding: 16px 0;
+    }
+
+    @media screen and (min-width: 768px) {
+      padding: 16px 0px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      padding: 16px 30px;
+    }
   }
 
   &__logo-clients {

@@ -3,12 +3,21 @@ header {
 }
 
 .container-menu {
-  min-width: 320px;
-  max-width: 1200px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   display: flex;
   padding: 0px 15px;
+
+  @include mobile {
+    max-width: 460px;
+  }
+  @include tablet {
+    max-width: 768px;
+  }
+  @include desktop {
+    max-width: 1200px;
+  }
 }
 
 .nav {
@@ -20,8 +29,13 @@ header {
 /*Меню*/
 
 .site-nav {
-  display: flex;
   margin-left: 93px;
+  @include mobile {
+    display: none;
+  }
+  @include tablet {
+    display: flex;
+  }
 }
 .site-nav__item:not(:last-child) {
   margin-right: 50px;
@@ -66,7 +80,6 @@ header {
 }
 
 .site-contakt {
-  display: flex;
   align-items: center;
   margin-left: auto;
 
@@ -94,6 +107,13 @@ header {
     vertical-align: middle;
 
     fill: currentColor;
+  }
+  @include mobile {
+    max-width: 460px;
+    display: none;
+  }
+  @include tablet {
+    display: flex;
   }
 }
 .site-contakt__item:not(:last-child) {

@@ -59,7 +59,7 @@
     @include tablet {
       max-width: 670px;
       width: 354px;
-      height: 374px;
+
       &:not(:last-child) {
         margin-right: 30px;
       }
