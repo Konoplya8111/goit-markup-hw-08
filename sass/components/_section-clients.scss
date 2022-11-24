@@ -7,7 +7,7 @@
 }
 
 .container-clients {
-  width: 100%;
+  width: 1200px;
   margin: 0px auto;
   padding: 0px 15px;
 
@@ -50,17 +50,19 @@
     width: 100%;
 
     @media screen and (max-width: 767px) {
-      @include calc(2, 30px);
-      flex-wrap: wrap;
+      flex-basis: calc((100% - 30px) / 2);
+      /*flex-wrap: wrap;*/
     }
 
     @include tablet {
-      @include calc(3, 30px);
-      flex-wrap: wrap;
+      width: 768px;
+      flex-basis: calc((100% - 60px) / 3);
+      /* flex-wrap: wrap;*/
     }
 
     @include desktop {
-      @include calc(6, 30px);
+      width: 1200px;
+      flex-basis: calc((100% - 150px) / 6);
     }
   }
 

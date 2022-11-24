@@ -3,20 +3,20 @@ header {
 }
 
 .container-menu {
-  width: 100%;
+  width: 1200px;
   margin-left: auto;
   margin-right: auto;
   display: flex;
   padding: 0px 15px;
 
   @include mobile {
-    max-width: 460px;
+    width: 480px;
   }
   @include tablet {
-    max-width: 768px;
+    width: 768px;
   }
   @include desktop {
-    max-width: 1200px;
+    width: 1200px;
   }
 }
 
@@ -30,9 +30,13 @@ header {
 
 .site-nav {
   margin-left: 93px;
-  @include mobile {
+  @media screen and (max-width: 300px) {
     display: none;
   }
+  @media screen and (min-width: 301px) {
+    display: none;
+  }
+
   @include tablet {
     display: flex;
   }
@@ -108,14 +112,30 @@ header {
 
     fill: currentColor;
   }
+  @include mob {
+    display: none;
+  }
   @include mobile {
-    max-width: 460px;
     display: none;
   }
   @include tablet {
+    display: block;
+  }
+
+  @include desktop {
     display: flex;
   }
 }
 .site-contakt__item:not(:last-child) {
   margin-right: 50px;
+}
+
+.menu-open {
+  background-color: $primary-white-color;
+  border: none;
+  margin-left: auto;
+
+  @include tablet {
+    display: none;
+  }
 }
