@@ -3,11 +3,12 @@ header {
 }
 
 .container-menu {
-  width: 1200px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   display: flex;
   padding: 0px 15px;
+  align-items: center;
 
   @include mobile {
     width: 480px;
@@ -23,7 +24,8 @@ header {
 .nav {
   display: flex;
   align-items: center;
-  margin-right: 93px;
+
+  margin-right: auto;
 }
 
 /*Меню*/
@@ -87,6 +89,16 @@ header {
   align-items: center;
   margin-left: auto;
 
+  @include tablet {
+    &__item {
+      margin-bottom: 10px;
+    }
+  }
+  @include desktop {
+    &__item {
+      margin-right: 40px;
+    }
+  }
   &__link-icon:hover,
   &__link-icon:focus {
     color: $accent-color;
@@ -94,8 +106,6 @@ header {
 
   &__link-icon {
     display: block;
-    padding-top: 32px;
-    padding-bottom: 32px;
 
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -126,14 +136,12 @@ header {
     display: flex;
   }
 }
-.site-contakt__item:not(:last-child) {
-  margin-right: 50px;
-}
 
 .menu-open {
   background-color: $primary-white-color;
   border: none;
   margin-left: auto;
+  display: inline-block;
 
   @include tablet {
     display: none;

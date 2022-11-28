@@ -29,14 +29,7 @@
 .features {
   display: flex;
   justify-content: center;
-
-  @include mobile {
-    flex-wrap: wrap;
-  }
-
-  @include tablet {
-    flex-wrap: wrap;
-  }
+  flex-wrap: wrap;
 
   @include desktop {
     flex-wrap: nowrap;
@@ -71,7 +64,6 @@
 
 .features__item {
   @include mobile {
-    min-width: 320px;
     width: 450px;
     &:not(:last-child) {
       margin-bottom: 30px;

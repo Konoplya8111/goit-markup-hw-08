@@ -1,5 +1,8 @@
 .section-work {
   padding-bottom: 94px;
+  @include mob {
+    display: none;
+  }
   @include mobile {
     display: none;
     @include desktop {

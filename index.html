@@ -68,6 +68,57 @@
           </svg>
         </button>
       </div>
+      <div class="mob-menu is-hidden" data-menu>
+        <button type="button" class="menu-close" data-menu-close>
+          <svg class="header-icon" width="40" height="40">
+            <use href="./images/symbol-defs.svg#icon-close_mobile"></use>
+          </svg>
+        </button>
+        <div class="mob-menu-top">
+          <ul class="mob-nav list">
+            <li class="mob-nav__link">
+              <a href="#" class="mob-nav__link mob-nav__link--current link"
+                >Студія</a
+              >
+            </li>
+            <li class="mob-nav__link">
+              <a href="./portfolio.html" class="link">Портфоліо</a>
+            </li>
+            <li class="mob-nav__link">
+              <a href="#" class="link">Контакти</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="mob-menu-bottom">
+          <ul class="communication-mob list">
+            <li>
+              <a href="tel:+380961111111" class="mob-tel link"
+                >+38 096 111 11 11</a
+              >
+            </li>
+            <li>
+              <a href="mailto:info@devstudio.com" class="link"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <ul class="header-socials list">
+            <li class="header-social__items">
+              <a href="#" class="link">Instagram</a>
+            </li>
+            <li class="header-social__items">
+              <a href="#" class="link">Twitter</a>
+            </li>
+            <li class="header-social__items">
+              <a href="#" class="link">Facebook</a>
+            </li>
+            <li class="header-social__items">
+              <a href="#" class="link">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </header>
 
     <main>
@@ -284,6 +335,26 @@
           <h2 class="container-team__section-title">Наша команда</h2>
           <ul class="register list">
             <li class="register__item-card">
+              <picture>
+                <source
+                  srcset="./images/card1.jpg 1x, .images/card1-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/card1-mobile-1x.jpg 1x,
+                    .images/card1-mobile-2x.jpg  2x
+                  "
+                  media="(min-width: 480px)"
+                />
+                <source
+                  srcset="
+                    ./images/card1-tablet-1x.jpg 1x,
+                    .images/card1-tablet-2x.jpg  2x
+                  "
+                  media="(min-width: 480px)"
+                />
+              </picture>
               <img
                 class="register__card"
                 src="./images/card1.jpg"
@@ -319,6 +390,26 @@
               </div>
             </li>
             <li class="register__item-card">
+              <picture>
+                <source
+                  srcset="./images/card2.jpg 1x, .images/card2-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/card2-mobile-1x.jpg 1x,
+                    .images/card2-mobile-2x.jpg  2x
+                  "
+                  media="(min-width: 480px)"
+                />
+                <source
+                  srcset="
+                    ./images/card2-tablet-1x.jpg 1x,
+                    .images/card2-tablet-2x.jpg  2x
+                  "
+                  media="(min-width: 480px)"
+                />
+              </picture>
               <img
                 class="register__card"
                 src="./images/card2.jpg"
@@ -354,6 +445,26 @@
               </div>
             </li>
             <li class="register__item-card">
+              <picture>
+                <source
+                  srcset="./images/card3.jpg 1x, .images/card3-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/card3-mobile-1x.jpg 1x,
+                    .images/card3-mobile-2x.jpg  2x
+                  "
+                  media="(min-width: 480px)"
+                />
+                <source
+                  srcset="
+                    ./images/card3-tablet-1x.jpg 1x,
+                    .images/card3-tablet-2x.jpg  2x
+                  "
+                  media="(min-width: 480px)"
+                />
+              </picture>
               <img
                 class="register__card"
                 src="./images/card3.jpg"
@@ -389,6 +500,26 @@
               </div>
             </li>
             <li class="register__item-card">
+              <picture>
+                <source
+                  srcset="./images/card4.jpg 1x, .images/card4-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/card4-mobile-1x.jpg 1x,
+                    .images/card4-mobile-2x.jpg  2x
+                  "
+                  media="(min-width: 480px)"
+                />
+                <source
+                  srcset="
+                    ./images/card4-tablet-1x.jpg 1x,
+                    .images/card4-tablet-2x.jpg  2x
+                  "
+                  media="(min-width: 480px)"
+                />
+              </picture>
               <img
                 class="register__card"
                 src="./images/card4.jpg"
@@ -508,25 +639,25 @@
             ><span class="wrap__span">Web</span>Studio</a
           >
           <address>
-            <ul class="contakt list">
-              <li class="contakt__item">
+            <ul class="contact list">
+              <li class="contact__item">
                 <a
                   href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9"
                   target="_blank"
                   rel="noopener noreferrer nofollow"
-                  class="contakt__item-link"
+                  class="contact__item-link"
                   >м. Київ, пр-т Лесі Українки, 26</a
                 >
               </li>
-              <li class="contakt__item">
+              <li class="contact__item">
                 <a
                   href="mailto:info@devstudio.com"
-                  class="contakt__contakt-link"
+                  class="contact__contact-link"
                   >info@devstudio.com</a
                 >
               </li>
-              <li class="contakt__item">
-                <a href="tel:+380961111111" class="contakt__contakt-link"
+              <li class="contact__item">
+                <a href="tel:+380961111111" class="contact__contact-link"
                   >+38 096 111 11 11</a
                 >
               </li>
