@@ -54,7 +54,7 @@
     @include tablet {
       width: 354px;
 
-      &:not(:last-child) {
+      &:nth-child(even) {
         margin-right: 30px;
       }
     }

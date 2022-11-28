@@ -983,7 +983,7 @@ header {
   .register__item-card {
     width: 354px;
   }
-  .register__item-card:not(:last-child) {
+  .register__item-card:nth-child(even) {
     margin-right: 30px;
   }
 }
@@ -1164,6 +1164,11 @@ header {
 }
 .customers__customers-item:not(:last-child) {
   margin-right: 30px;
+}
+@media screen and (max-width: 1199px) {
+  .customers__customers-item:nth-child(even) {
+    margin-right: 30px;
+  }
 }
 .customers__logo-clients {
   display: -webkit-box;

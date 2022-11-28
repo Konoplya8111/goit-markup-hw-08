@@ -74,6 +74,12 @@
     margin-right: 30px;
   }
 
+  @media screen and (max-width: 1199px) {
+    &__customers-item:nth-child(even) {
+      margin-right: 30px;
+    }
+  }
+
   &__logo-clients {
     display: flex;
     align-items: center;
