@@ -46,17 +46,13 @@
     @include mobile {
       width: 450px;
       height: 460px;
-      &:not(:last-child) {
+      &:nth-child(odd) {
         margin-right: 30px;
       }
     }
 
     @include tablet {
       width: 354px;
-
-      &:nth-child(even) {
-        margin-right: 30px;
-      }
     }
 
     @include desktop {
