@@ -1,11 +1,13 @@
 .section-features {
   padding-top: 94px;
   padding-bottom: 94px;
+
+  @media screen and (max-width: 1199px) {
+    padding: 60px 0px;
+  }
 }
 
 .container-features {
-  min-width: 320px;
-  max-width: 1200px;
   margin: 0px auto;
   padding: 0px 15px;
 }
@@ -30,10 +32,10 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  gap: 30px;
 
   @include desktop {
     flex-wrap: nowrap;
-    padding-left: 30px;
   }
 
   &__features-title {
@@ -45,7 +47,7 @@
     line-height: 1.14;
     letter-spacing: 0.03em;
 
-    @include mobile {
+    @include tab {
       text-align: center;
     }
     @include tablet {
@@ -64,28 +66,18 @@
 
 .features__item {
   @include mobile {
-    width: 450px;
-    &:not(:last-child) {
-      margin-bottom: 30px;
-    }
+    width: 100%;
   }
 
   @include tablet {
     max-width: 768px;
 
-    &:nth-child(odd) {
-      margin-right: 30px;
-    }
     @include calc(2, 30px);
-    width: 354px;
   }
 
   @include desktop {
     max-width: 1200px;
     @include calc(4, 30px);
-    &:not(:last-child) {
-      margin-right: 30px;
-    }
-    width: 270px;
+    width: 100%;
   }
 }

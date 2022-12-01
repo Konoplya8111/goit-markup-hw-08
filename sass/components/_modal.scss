@@ -40,6 +40,11 @@
     max-width: 450px;
     min-height: 609px;
   }
+
+  @media screen and (max-width: 479px) {
+    max-width: 320px;
+    min-height: 609px;
+  }
 }
 
 .close {

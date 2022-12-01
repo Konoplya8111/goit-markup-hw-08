@@ -6,13 +6,12 @@
   @include mobile {
     display: none;
     @include desktop {
-      display: inline;
+      display: block;
     }
   }
 }
 
 .container-work {
-  max-width: 1200px;
   margin: 0px auto;
   padding: 0px 15px;
 

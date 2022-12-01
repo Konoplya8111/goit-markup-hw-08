@@ -7,19 +7,23 @@
 }
 
 .container-clients {
+  
   margin: 0px auto;
   padding: 0px 15px;
 
   &__clients-title {
     text-align: center;
-
-    font-weight: 700;
     font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 50px;
+
     line-height: 1.17;
     color: $primary-text-color;
-  }
-  @media screen and (max-width: 1199px) {
-    margin-bottom: 30px;
+
+    @media screen and (max-width: 1199px) {
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
   }
 }
 
@@ -27,6 +31,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 30px;
 
   @include tab {
     flex-wrap: wrap;
@@ -51,8 +56,6 @@
   }
 
   &__customers-item {
-    margin-top: 50px;
-
     border: 1px solid #afb1b8;
     border-radius: 4px;
 
@@ -70,14 +73,14 @@
       flex-basis: calc((100% - 150px) / 6);
     }
   }
-  &__customers-item:not(:last-child) {
+  /*&__customers-item:not(:last-child) {
     margin-right: 30px;
-  }
+  }*/
 
-  @media screen and (max-width: 1199px) {
-    &__customers-item:nth-child(even) {
+  @include tab {
+    /* &__customers-item:nth-child(2n) {
       margin-right: 30px;
-    }
+    }*/
   }
 
   &__logo-clients {

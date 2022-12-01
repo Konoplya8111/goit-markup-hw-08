@@ -33,10 +33,9 @@
   }
 }
 
-.wrap__logo-footer {
+.wrap {
   @media screen and (max-width: 1199px) {
     text-align: center;
-    margin-left: 30px;
   }
 
   margin-bottom: 20px;
@@ -55,12 +54,11 @@
 
 .contact {
   display: block;
-  margin-bottom: 9px;
   font-style: normal;
-  &:last-child {
-    margin: 0;
-  }
 
+  &__item:not(:last-child) {
+    margin-bottom: 12px;
+  }
   &__contact-link {
     text-decoration: none;
 
@@ -71,9 +69,6 @@
     &:hover,
     &:focus {
       color: $accent-color;
-    }
-    @media screen and (max-width: 1199px) {
-      margin-left: 30px;
     }
   }
   &__item-link {
@@ -129,79 +124,5 @@
   &__social-item {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
-  }
-}
-
-/*.footer-social__team-icons {
-  fill: currentColor;
-}*/
-
-.form-footer__form-title {
-  @media screen and (max-width: 767px) {
-    text-align: center;
-  }
-}
-
-.form-footer__form-input {
-  width: 100%;
-  min-height: 50px;
-
-  margin: 0;
-  padding: 0 18px;
-
-  @media screen and (min-width: 768px) {
-    width: 450px;
-  }
-
-  @media screen and (min-width: 1200px) {
-    width: 350px;
-  }
-
-  font-size: 16px;
-  line-height: 1.25;
-  letter-spacing: 0.03em;
-
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-  border-radius: 4px;
-  background-color: transparent;
-  color: rgba(255, 255, 255, 0.6);
-
-  outline: transparent;
-
-  transition: filter 250ms cubic-bezier(0.4, 0, 0.2, 1) border 250ms
-    cubic-bezier(0.4, 0, 0.2, 1);
-  &__form-input:focus {
-    border: 1px solid $accent-color;
-  }
-}
-
-.form-footer__form-input::placeholder {
-  font-size: 16px;
-  line-height: 1.25;
-  letter-spacing: 0.03em;
-
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.form-footer__form-btn {
-  padding: 10px 0;
-  min-width: 200px;
-
-  @media screen and (max-width: 767px) {
-    margin-top: 20px;
-  }
-
-  @media screen and (min-width: 768px) {
-    display: block;
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  @media screen and (min-width: 1200px) {
-    display: inline-block;
-    margin-left: 12px;
-    margin-top: 0;
   }
 }

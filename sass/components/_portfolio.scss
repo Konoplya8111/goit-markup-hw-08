@@ -6,20 +6,17 @@
 }
 
 .container-button {
-  width: 1200px;
+  max-width: 1200px;
   margin-right: auto;
   margin-left: auto;
   padding: 0px 15px;
-}
-
-.portfolio__item:not(:last-child) {
-  margin-right: 8px;
 }
 
 .portfolio {
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
+  gap: 8px;
 
   &__portfolio-button:hover,
   &__portfolio-button:focus {
