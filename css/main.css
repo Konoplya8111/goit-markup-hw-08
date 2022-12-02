@@ -202,6 +202,7 @@ header {
 @media screen and (max-width: 1199px) {
   .site-contakt__link-icon {
     margin-bottom: 10px;
+    font-size: 12px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1079,8 +1080,6 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 16px;
-  margin-right: 35px;
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -1113,6 +1112,7 @@ header {
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
+  margin-bottom: 16px;
 }
 @media screen and (min-width: 480px) {
   .team-content {
@@ -1201,14 +1201,14 @@ header {
 }
 @media screen and (max-width: 767px) {
   .customers__customers-item {
-    -ms-flex-preferred-size: calc((100% - 30px) / 3);
-        flex-basis: calc((100% - 30px) / 3);
+    -ms-flex-preferred-size: calc((100% - 30px) / 2);
+        flex-basis: calc((100% - 30px) / 2);
   }
 }
 @media screen and (min-width: 768px) {
   .customers__customers-item {
-    -ms-flex-preferred-size: calc((100% - 60px) / 4);
-        flex-basis: calc((100% - 60px) / 4);
+    -ms-flex-preferred-size: calc((100% - 60px) / 3);
+        flex-basis: calc((100% - 60px) / 3);
   }
 }
 @media screen and (min-width: 1200px) {
