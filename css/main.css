@@ -189,6 +189,9 @@ header {
 .site-contakt__link-icon:hover, .site-contakt__link-icon:focus {
   color: #2196f3;
 }
+.site-contakt__links-icon:hover, .site-contakt__links-icon:focus {
+  color: #2196f3;
+}
 .site-contakt__link-icon {
   display: block;
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -201,16 +204,53 @@ header {
 }
 @media screen and (max-width: 1199px) {
   .site-contakt__link-icon {
+    font-size: 12px;
     margin-bottom: 10px;
+  }
+}
+.site-contakt__links-icon {
+  display: block;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: #757575;
+}
+@media screen and (max-width: 1199px) {
+  .site-contakt__links-icon {
     font-size: 12px;
   }
 }
-@media screen and (min-width: 1200px) {
-  .site-contakt__link-icon {
-    margin-bottom: 0px;
+.site-contakt__link-icons {
+  margin-right: 10px;
+  vertical-align: middle;
+  fill: currentColor;
+}
+@media screen and (max-width: 479px) {
+  .site-contakt {
+    display: none;
   }
 }
-.site-contakt__link-icons {
+@media screen and (min-width: 480px) {
+  .site-contakt {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .site-contakt {
+    display: block;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .site-contakt {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+.site-contakt__links-icons {
   margin-right: 10px;
   vertical-align: middle;
   fill: currentColor;
@@ -1569,13 +1609,6 @@ header {
   padding-bottom: 94px;
   border: 1px solid #eeeeee;
   border-top: none;
-}
-
-.container-button {
-  max-width: 1200px;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 0px 15px;
 }
 
 .portfolio {

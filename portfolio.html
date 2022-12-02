@@ -31,9 +31,11 @@
               </div>
             </li>
             <li class="site-nav__item">
-              <a href="./portfolio.html" class="menu__link-menu current"
-                >Портфоліо</a
-              >
+              <div class="menu">
+                <a href="./portfolio.html" class="menu__link-menu current"
+                  >Портфоліо</a
+                >
+              </div>
             </li>
             <li class="site-nav__item">
               <div class="menu">
@@ -60,11 +62,67 @@
             >
           </li>
         </ul>
+        <button type="button" class="menu-open" data-menu-open>
+          <svg class="button__menu-icon" width="40" height="40">
+            <use href="./images/symbol-defs.svg#icon-menu-mobile"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="mob-menu is-hidden" data-menu>
+        <button type="button" class="menu-close" data-menu-close>
+          <svg class="header-icon" width="40" height="40">
+            <use href="./images/symbol-defs.svg#icon-close_mobile"></use>
+          </svg>
+        </button>
+        <div class="mob-menu-top">
+          <ul class="mob-nav list">
+            <li class="mob-nav__link">
+              <a href="#" class="mob-nav__link mob-nav__link--current link"
+                >Студія</a
+              >
+            </li>
+            <li class="mob-nav__link">
+              <a href="./portfolio.html" class="link">Портфоліо</a>
+            </li>
+            <li class="mob-nav__link">
+              <a href="#" class="link">Контакти</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="mob-menu-bottom">
+          <ul class="communication-mob list">
+            <li>
+              <a href="tel:+380961111111" class="mob-tel link"
+                >+38 096 111 11 11</a
+              >
+            </li>
+            <li>
+              <a href="mailto:info@devstudio.com" class="link"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <ul class="header-socials list">
+            <li class="header-social__items">
+              <a href="#" class="link">Instagram</a>
+            </li>
+            <li class="header-social__items">
+              <a href="#" class="link">Twitter</a>
+            </li>
+            <li class="header-social__items">
+              <a href="#" class="link">Facebook</a>
+            </li>
+            <li class="header-social__items">
+              <a href="#" class="link">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
     <main>
       <section class="button-portfolio">
-        <div class="container-button">
+        <div class="container-button container">
           <h1 class="visually-hidden">Портфоліо</h1>
           <ul class="portfolio list">
             <li class="portfolio__item">
@@ -100,9 +158,33 @@
               <article class="card">
                 <a class="card__overlay-link" href="">
                   <div class="card-work">
-                    <img src="./images/techocrat.jpg" alt="Технокряк"
-                    width="370" height="294" background: url(portfolio1.jpg);
-                    class="card-work__work-link " />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/techocrat.jpg    1x,
+                          ./images/img1-desk-2x.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/img1-tabl-1x.jpg 1x,
+                          ./images/img1-tabl-2x.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/img1-mob-1x.jpg 1x,
+                          ./images/img1-mob-2x.jpg 2x
+                        "
+                        media="(min-width: 320px)"
+                      />
+                      <img src="./images/techocrat.jpg" alt="Технокряк"
+                      width="370" height="294" background: url(portfolio1.jpg);
+                      class="card-work__work-link " />
+                    </picture>
+
                     <div class="animation">
                       <p class="animation__animation-text">
                         Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -123,13 +205,37 @@
               <article class="card">
                 <a class="card__overlay-link" href="">
                   <div class="card-work">
-                    <img
-                      src="./images/basketball.jpg"
-                      alt="Баскетбол"
-                      width="370"
-                      height="294"
-                      class="card-work__work-link"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/basketball.jpg   1x,
+                          ./images/img2-desk-2x.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/img2-tabl-1x.jpg 1x,
+                          ./images/img2-tabl-2x.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/img2-mob-1x.jpg 1x,
+                          ./images/img2-mob-2x.jpg 2x
+                        "
+                        media="(min-width: 320px)"
+                      />
+                      <img
+                        src="./images/basketball.jpg"
+                        alt="Баскетбол"
+                        width="370"
+                        height="294"
+                        class="card-work__work-link"
+                      />
+                    </picture>
+
                     <div class="animation">
                       <p class="animation__animation-text">
                         Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -152,13 +258,37 @@
               <article class="card">
                 <a class="card__overlay-link" href="">
                   <div class="card-work">
-                    <img
-                      src="./images/restorant.jpg"
-                      alt="Лоогтип ресторана"
-                      width="370"
-                      height="294"
-                      class="card-work__work-link"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/restorant.jpg    1x,
+                          ./images/img3-desk-2x.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/img3-tabl-1x.jpg 1x,
+                          ./images/img3-tabl-2x.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/img3-mob-1x.jpg 1x,
+                          ./images/img3-mob-2x.jpg 2x
+                        "
+                        media="(min-width: 320px)"
+                      />
+                      <img
+                        src="./images/restorant.jpg"
+                        alt="Лоогтип ресторана"
+                        width="370"
+                        height="294"
+                        class="card-work__work-link"
+                      />
+                    </picture>
+
                     <div class="animation">
                       <p class="animation__animation-text">
                         Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -179,13 +309,37 @@
               <article class="card">
                 <a class="card__overlay-link" href="">
                   <div class="card-work">
-                    <img
-                      src="./images/headphone.jpg"
-                      alt="Навушники"
-                      width="370"
-                      height="294"
-                      class="card-work__work-link"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/headphone.jpg    1x,
+                          ./images/img4-desk-2x.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/img4-tabl-1x.jpg 1x,
+                          ./images/img4-tabl-2x.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/img4-mob-1x.jpg 1x,
+                          ./images/img4-mob-2x.jpg 2x
+                        "
+                        media="(min-width: 320px)"
+                      />
+                      <img
+                        src="./images/headphone.jpg"
+                        alt="Навушники"
+                        width="370"
+                        height="294"
+                        class="card-work__work-link"
+                      />
+                    </picture>
+
                     <div class="animation">
                       <p class="animation__animation-text">
                         Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -206,13 +360,37 @@
               <article class="card">
                 <a class="card__overlay-link" href="">
                   <div class="card-work">
-                    <img
-                      src="./images/box.jpg"
-                      alt="Коробки"
-                      width="370"
-                      height="294"
-                      class="card-work__work-link"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/box.jpg          1x,
+                          ./images/img5-desk-2x.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/img5-tabl-1x.jpg 1x,
+                          ./images/img5-tabl-2x.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/img5-mob-1x.jpg 1x,
+                          ./images/img5-mob-2x.jpg 2x
+                        "
+                        media="(min-width: 320px)"
+                      />
+                      <img
+                        src="./images/box.jpg"
+                        alt="Коробки"
+                        width="370"
+                        height="294"
+                        class="card-work__work-link"
+                      />
+                    </picture>
+
                     <div class="animation">
                       <p class="animation__animation-text">
                         Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -233,13 +411,37 @@
               <article class="card">
                 <a class="card__overlay-link" href="">
                   <div class="card-work">
-                    <img
-                      src="./images/monitor.jpg"
-                      alt="Монітор"
-                      width="370"
-                      height="294"
-                      class="card-work__work-link"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/monitor.jpg      1x,
+                          ./images/img6-desk-2x.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/img6-tabl-1x.jpg 1x,
+                          ./images/img6-tabl-2x.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/img6-mob-1x.jpg 1x,
+                          ./images/img6-mob-2x.jpg 2x
+                        "
+                        media="(min-width: 320px)"
+                      />
+                      <img
+                        src="./images/monitor.jpg"
+                        alt="Монітор"
+                        width="370"
+                        height="294"
+                        class="card-work__work-link"
+                      />
+                    </picture>
+
                     <div class="animation">
                       <p class="animation__animation-text">
                         Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -262,13 +464,37 @@
               <article class="card">
                 <a class="card__overlay-link" href="">
                   <div class="card-work">
-                    <img
-                      src="./images/magazine.jpg"
-                      alt="Журнал"
-                      width="370"
-                      height="294"
-                      class="card-work__work-link"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/magazine.jpg     1x,
+                          ./images/img7-desk-2x.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/img7-tabl-1x.jpg 1x,
+                          ./images/img7-tabl-2x.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/img7-mob-1x.jpg 1x,
+                          ./images/img7-mob-2x.jpg 2x
+                        "
+                        media="(min-width: 320px)"
+                      />
+                      <img
+                        src="./images/magazine.jpg"
+                        alt="Журнал"
+                        width="370"
+                        height="294"
+                        class="card-work__work-link"
+                      />
+                    </picture>
+
                     <div class="animation">
                       <p class="animation__animation-text">
                         Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -291,13 +517,37 @@
               <article class="card">
                 <a class="card__overlay-link" href="">
                   <div class="card-work">
-                    <img
-                      src="./images/badge.jpg"
-                      alt="Бейджик"
-                      width="370"
-                      height="294"
-                      class="card-work__work-link"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/badge.jpg        1x,
+                          ./images/img8-desk-2x.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/img8-tabl-1x.jpg 1x,
+                          ./images/img8-tabl-2x.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/img8-mob-1x.jpg 1x,
+                          ./images/img8-mob-2x.jpg 2x
+                        "
+                        media="(min-width: 320px)"
+                      />
+                      <img
+                        src="./images/badge.jpg"
+                        alt="Бейджик"
+                        width="370"
+                        height="294"
+                        class="card-work__work-link"
+                      />
+                    </picture>
+
                     <div class="animation">
                       <p class="animation__animation-text">
                         Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -318,13 +568,37 @@
               <article class="card">
                 <a class="card__overlay-link" href="">
                   <div class="card-work">
-                    <img
-                      src="./images/laptop.jpg"
-                      alt="Ноутбук"
-                      width="370"
-                      height="294"
-                      class="card-work__work-link"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/laptop.jpg       1x,
+                          ./images/img9-desk-2x.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/img9-tabl-1x.jpg 1x,
+                          ./images/img9-tabl-2x.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/img9-mob-1x.jpg 1x,
+                          ./images/img9-mob-2x.jpg 2x
+                        "
+                        media="(min-width: 320px)"
+                      />
+                      <img
+                        src="./images/laptop.jpg"
+                        alt="Ноутбук"
+                        width="370"
+                        height="294"
+                        class="card-work__work-link"
+                      />
+                    </picture>
+
                     <div class="animation">
                       <p class="animation__animation-text">
                         Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -426,5 +700,6 @@
         </form>
       </div>
     </footer>
+    <script src="./menu.js"></script>
   </body>
 </html>

@@ -97,6 +97,11 @@ header {
     color: $accent-color;
   }
 
+  &__links-icon:hover,
+  &__links-icon:focus {
+    color: $accent-color;
+  }
+
   &__link-icon {
     display: block;
 
@@ -109,12 +114,24 @@ header {
     color: $title-text-color;
 
     @media screen and (max-width: 1199px) {
-      margin-bottom: 10px;
       font-size: 12px;
+      margin-bottom: 10px;
     }
+  }
 
-    @include desktop {
-      margin-bottom: 0px;
+  &__links-icon {
+    display: block;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: $title-text-color;
+
+    @media screen and (max-width: 1199px) {
+      font-size: 12px;
     }
   }
 
@@ -137,8 +154,27 @@ header {
   @include desktop {
     display: flex;
   }
-}
 
+  &__links-icons {
+    margin-right: 10px;
+    vertical-align: middle;
+
+    fill: currentColor;
+  }
+  @include mob {
+    display: none;
+  }
+  @include mobile {
+    display: none;
+  }
+  @include tablet {
+    display: block;
+  }
+
+  @include desktop {
+    display: flex;
+  }
+}
 .menu-open {
   background-color: $primary-white-color;
   border: none;
